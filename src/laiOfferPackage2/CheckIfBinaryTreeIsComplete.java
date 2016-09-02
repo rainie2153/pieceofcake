@@ -44,7 +44,20 @@ public class CheckIfBinaryTreeIsComplete {
 
         //CheckIfBinaryTreeIsComplete test = new CheckIfBinaryTreeIsComplete();
         //Queue<TreeNode> input = new LinkedList<TreeNode>();
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        CheckIfBinaryTreeIsComplete test = new CheckIfBinaryTreeIsComplete();
+        TreeNode ten = new TreeNode(10);
+        TreeNode seven = new TreeNode(7);
+        TreeNode twelve = new TreeNode(12);
+        TreeNode two = new TreeNode(2);
+        TreeNode five = new TreeNode(5);
+
+
+        ten.left = seven;
+        ten.right = twelve;
+        seven.left = two;
+        seven.right = five;
+
+
 
 
 

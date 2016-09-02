@@ -10,6 +10,7 @@ public class SummaryRanges {
         List<String> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
         int prev = nums[0], start = nums[0];
+
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == prev + 1) {
                 prev += 1;
@@ -23,6 +24,7 @@ public class SummaryRanges {
                 start = nums[i];
             }
         }
+
         if (prev == start) {
             res.add(prev + "");
         } else {

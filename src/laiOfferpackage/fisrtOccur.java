@@ -17,6 +17,7 @@ public class fisrtOccur {
         if (array[left] == target) return left;
         if (array[right] == target) return right;
         return -1;
+
     }
 
     public static void main(String[] args) {

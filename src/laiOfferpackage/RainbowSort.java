@@ -4,7 +4,11 @@ import java.util.Arrays;
 
 /**
  * Created by yuliu on 3/10/16.
- */
+ *///Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent
+    //with the colors int the order red, white and blue.
+    //idea就是用counting sort
+    //First, iterate the array counting number of 0's , 1's and 2's then overwrite array with
+    //total number of 0's then 1's and followed by 2's
 public class RainbowSort {
     public int[] rainbowSort(int[] array) {
         if (array == null || array.length <= 1) {
