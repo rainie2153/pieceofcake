@@ -1,7 +1,5 @@
 package laiOfferPackage2;
 
-import com.intellij.vcs.log.Hash;
-import com.intellij.vcs.log.graph.api.elements.GraphNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

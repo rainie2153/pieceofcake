@@ -1,6 +1,5 @@
 package LeetCode;
 
-import org.apache.xerces.util.SynchronizedSymbolTable;
 
 /**
  * Created by yuliu on 8/25/16.

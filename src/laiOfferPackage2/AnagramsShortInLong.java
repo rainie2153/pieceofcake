@@ -1,7 +1,5 @@
 package laiOfferPackage2;
 
-import kotlin.ranges.CharRange;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

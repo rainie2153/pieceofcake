@@ -2,7 +2,6 @@ package LeetCode;
 
 import java.util.*;
 
-import static com.intellij.util.ArrayUtil.swap;
 
 /**
  * Created by yuliu on 7/18/16.
