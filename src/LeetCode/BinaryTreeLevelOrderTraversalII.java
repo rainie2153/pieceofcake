@@ -3,19 +3,20 @@ import java.util.*;
 /**
  * Created by yuliu on 9/3/16.
  */
-public class BinaryTreeLevelOrderTraversal {
+//Bottom up的区别是本来是用list来保存结果，现在可以把list of nodes用一个stack来保存然后最后返回回来
+public class BinaryTreeLevelOrderTraversalII {
     static class TreeNode{
         TreeNode left;
         TreeNode right;
         int val;
-        TreeNode(int x){
+        TreeNode(int x) {
             this.val = x;
         }
     }
-    public List<List<Integer>> levelOrder(TreeNode root){
-        List<List<Integer>> res = new ArrayList<>();
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        Deque<List<Integer>> res = new LinkedList<List<Integer>>();
         if (root == null) {
-            return res;
+            return (List<List<Integer>>)res;
         }
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
@@ -32,12 +33,12 @@ public class BinaryTreeLevelOrderTraversal {
                     q.offer(temp.right);
                 }
             }
-            res.add(ans);
+            res.push(ans);
         }
-        return res;
+        return (List<List<Integer>>) res;
     }
     public static void main(String[] args) {
-        BinaryTreeLevelOrderTraversal test = new BinaryTreeLevelOrderTraversal();
+        BinaryTreeLevelOrderTraversalII test = new BinaryTreeLevelOrderTraversalII();
         TreeNode ten = new TreeNode(10);
         TreeNode seven = new TreeNode(7);
         TreeNode twelve = new TreeNode(12);
@@ -53,7 +54,8 @@ public class BinaryTreeLevelOrderTraversal {
         seven.right = five;
         twelve.left = eleven;
         twelve.right = fourteen;
-        System.out.print(test.levelOrder(ten));
+        System.out.print(test.levelOrderBottom(ten));
 
     }
+
 }
