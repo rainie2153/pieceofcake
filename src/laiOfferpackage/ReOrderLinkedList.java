@@ -10,7 +10,7 @@ public class ReOrderLinkedList {
 
         ListNode(int value) {
             this.value = value;
-            next = null;
+            //next = null;
         }
     }
 
