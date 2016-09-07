@@ -9,7 +9,6 @@ public class InsertInSortedLinkedList {
         ListNode next;
         ListNode (int value) {
             this.value = value;
-            next = null;
         }
     }
 
