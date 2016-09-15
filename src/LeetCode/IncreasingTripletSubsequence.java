@@ -32,6 +32,6 @@ public class IncreasingTripletSubsequence {
     public static void main(String args[]) {
         IncreasingTripletSubsequence test = new IncreasingTripletSubsequence();
         int[] input = {5,2,3,1,4};
-        test.increasingTriplet(input);
+        System.out.print(test.increasingTriplet(input));
     }
 }
