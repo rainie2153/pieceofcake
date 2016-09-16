@@ -42,7 +42,8 @@ public class FractionToRecurringDecimal {
 
     public static void main(String args[]) {
         FractionToRecurringDecimal test = new FractionToRecurringDecimal();
-        System.out.print(false ^ true);
+        System.out.print(test.fractionToDecimal(1,3));
+        System.out.print(true ^ true);
 
     }
 }
