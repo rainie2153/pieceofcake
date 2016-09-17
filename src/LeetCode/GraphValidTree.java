@@ -50,7 +50,7 @@ public class GraphValidTree {
 
     public boolean dfs(int n, List<List<Integer>> graph) {
         int[] visited = new int[n]; //0 represents not visited, 1 represents visiting, 2 represents visited
-        if (!dfsVisit(0, 0, graph, visited)) return false;
+        if (!dfs(0, 0, graph, visited)) return false;
 
         for (int i : visited) {
             if (i != 2) return false;
@@ -58,13 +58,13 @@ public class GraphValidTree {
         return true;
     }
 
-    public boolean dfsVisit(int i, int pre, List<List<Integer>> graph, int[] visited) {
+    public boolean dfs(int i, int pre, List<List<Integer>> graph, int[] visited) {
         if (visited[i] != 0) return false;
         visited[i] = 1;
 
         for (int child : graph.get(i)) {
             if (child != pre) {
-                if (!dfsVisit(child, i, graph, visited)) {
+                if (!dfs(child, i, graph, visited)) {
                     return false;
                 }
             }
@@ -76,6 +76,7 @@ public class GraphValidTree {
     public static void main(String args[]) {
         GraphValidTree test = new GraphValidTree();
         int[][] input = {{0, 1}, {0, 2}, {0, 3}, {1, 4}};
+        int[][] cycle = {{2,3},{1,4},{1,3},{0,1}};
         System.out.print(test.validTree(5,input));
     }
 }

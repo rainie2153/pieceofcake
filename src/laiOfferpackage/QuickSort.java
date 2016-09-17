@@ -32,9 +32,9 @@ public class QuickSort {
         int j = right - 1;
         while (i <= j) {
             if (array[i] < pivot){
-                i ++;
+                i++;
             } else if (array[j] >= pivot){
-                j --;
+                j--;
             } else {
                 swap (array, i++, j--);
             }
