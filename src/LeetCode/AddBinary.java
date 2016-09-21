@@ -3,6 +3,7 @@ package LeetCode;
 /**
  * Created by yuliu on 8/30/16.
  */
+
 public class AddBinary {
     public String addBinary(String a, String b) {
         StringBuilder sb = new StringBuilder();
