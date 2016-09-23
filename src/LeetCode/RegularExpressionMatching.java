@@ -16,7 +16,7 @@ public class RegularExpressionMatching {
         boolean[][] M = new boolean[s.length() + 1][p.length() + 1];
         M[0][0] = true;
 
-        for (int j = 2; j < M[0].length; j++) {
+        for (int j = 1; j < M[0].length; j++) {
             if (pattern[j - 1] == '*') {
                 M[0][j] = M[0][j - 2];
             }
@@ -28,7 +28,7 @@ public class RegularExpressionMatching {
                 } else if (pattern[j - 1] == '*') {
                     M[i][j] = M[i][j - 2];
                     if (pattern[j - 2] == '.' || pattern[j - 2] == str[i - 1]) {
-                        M[i][j] = M[i - 1][j];
+                        M[i][j] = M[i - 1][j] || M[i][j];
                     }
                 } else M[i][j] = false;
             }
@@ -37,12 +37,14 @@ public class RegularExpressionMatching {
     }
     public static void main (String args[]) {
         RegularExpressionMatching test = new RegularExpressionMatching();
-        System.out.println(test.isMatch("aa","a"));
-        System.out.println(test.isMatch("aaa","aa"));
-        System.out.println(test.isMatch("aa","aa"));
-        System.out.println(test.isMatch("aa", "a*"));
-        System.out.println(test.isMatch("ab", ".*"));
-        System.out.println(test.isMatch("aab", "c*a*b"));
+//        System.out.println(test.isMatch("aa","a"));
+//        System.out.println(test.isMatch("aaa","aa"));
+//        System.out.println(test.isMatch("aa","aa"));
+//        System.out.println(test.isMatch("aa", "a*"));
+//        System.out.println(test.isMatch("ab", ".*"));
+//        System.out.println(test.isMatch("aab", "c*a*b"));
+        System.out.println(test.isMatch("aaa", "ab*a*c*a"));
+
 
     }
 }

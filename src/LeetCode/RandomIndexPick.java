@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * Created by yuliu on 9/17/16.
+ * Given an array of integers with possible duplicates, randomly output the index of a given target number,
+ * int[] nums = new int[]{1,2,3,3,3};
+ *
  */
 public class RandomIndexPick {
     int[] nums;
@@ -35,7 +38,8 @@ For (n-1)th target, the probability of returning it is (n-1)/n * 1/(n-1)= 1/n.
     public static void main(String args[]) {
         int[] nums = {1,2,3,3,3};
         RandomIndexPick test = new RandomIndexPick(nums);
-        System.out.print(test.pick(3));
+        System.out.println(test.pick(3));//should return either index 2,3 or 4 randomly.Each index概率相等
+        System.out.println(test.pick(1));//should return 0 since in the array only nums[0] is equal to 1
 
     }
 

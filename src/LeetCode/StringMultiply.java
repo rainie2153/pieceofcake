@@ -22,7 +22,9 @@ public class StringMultiply {
             sb.append(tmp % 10);
         }
         sb.reverse();
-        if(sb.charAt(0) == '0') sb.deleteCharAt(0);
+        if(sb.charAt(0) == '0') {
+            sb.deleteCharAt(0);
+        }
         return sb.toString();
     }
     public static void main(String args[]) {

@@ -34,7 +34,7 @@ public class SubSet {
 
     public static void main (String[] args) {
         SubSet test = new SubSet();
-        String s = "abcd";
+        String s = "abc";
         test.subset(s);
 
 

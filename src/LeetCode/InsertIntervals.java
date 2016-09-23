@@ -26,7 +26,7 @@ public class InsertIntervals {
         for (Interval interval : intervals) {
             if (interval.end < newInterval.start) {//no overlap
                 res.add(interval);
-            } else if (interval.end >= newInterval.start && newInterval.start <= newInterval.end && newInterval.end >= interval.start) {
+            } else if (interval.end >= newInterval.start && newInterval.end >= interval.start) {
                 int newStart = Math.min(interval.start, newInterval.start);
                 int newEnd = Math.max(interval.end, newInterval.end);
                 newInterval = new Interval(newStart, newEnd);

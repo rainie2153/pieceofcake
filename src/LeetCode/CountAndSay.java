@@ -30,6 +30,6 @@ public class CountAndSay {
     }
     public static void main(String args[]) {
         CountAndSay test = new CountAndSay();
-        System.out.print(test.countAndSay(8));
+        System.out.print(test.countAndSay(6));
     }
 }

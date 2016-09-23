@@ -46,8 +46,8 @@ public class BinaryTreeInorderTraversal {
             return;
         }
         helper(root.left, res);
-        res.add(root.val);
         helper(root.right, res);
+        res.add(root.val);
     }
 
     //Method 2 Iteration use stack 跟recursive 的时空都是一样都是O(n)
@@ -113,7 +113,7 @@ public class BinaryTreeInorderTraversal {
         seven.right = five;
         twelve.left = eleven;
         twelve.right = fourteen;
-        System.out.print(test.inorder3(ten));
+        System.out.print(test.inorderTraversal(ten));
 
     }
 }

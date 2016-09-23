@@ -10,8 +10,6 @@ public class ImplementstrStr {
         }
         char[] explore = haystack.toCharArray();
         char[] target = needle.toCharArray();
-
-        int index = 0;
         for(int i = 0; i < explore.length - target.length + 1; i++) {
             int j = 0;
             for (j = 0; j < target.length; j++) {
