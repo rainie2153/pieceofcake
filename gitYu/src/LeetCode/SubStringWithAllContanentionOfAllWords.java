@@ -12,7 +12,7 @@ public class SubStringWithAllContanentionOfAllWords {
         if (s == null || s.length() == 0 || words.length == 0) return res;
 
         //Build target map for words
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> map = new java.util.HashMap<>();
         for (String word : words) {
             if (map.containsKey(word)) {
                 map.put(word, map.get(word) + 1);
@@ -28,7 +28,7 @@ public class SubStringWithAllContanentionOfAllWords {
         for (int i = 0; i < len; i++) {
             int start = i; //record the current starting point
             int count = 0; //record number of matchs
-            Map<String, Integer> found = new HashMap<String, Integer>(); //record the matches we've found from start to so far
+            Map<String, Integer> found = new java.util.HashMap<String, Integer>(); //record the matches we've found from start to so far
             for (int j = i; j <= s.length() - len; j += len) {
                 //get the substring from s
                 String sub = s.substring(j, j + len);

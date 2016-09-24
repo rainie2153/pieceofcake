@@ -23,6 +23,7 @@ public class SubSet {
         return result;
     }
 
+
     private void helper(char[] set, StringBuilder sb1, int index, List<String> result) {
         result.add(sb1.toString());
         for (int i = index; i < set.length; i++) {

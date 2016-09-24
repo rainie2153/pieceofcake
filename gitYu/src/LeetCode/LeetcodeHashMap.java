@@ -16,7 +16,7 @@ import java.util.Arrays;
  * containsValue(V value)
  * remove(K key)
  */
-public class HashMap<K, V> {
+public class LeetcodeHashMap<K, V> {
     public static class Node<K, V> {
         final K key;
         V value;
@@ -47,11 +47,11 @@ public class HashMap<K, V> {
     private int size; // how many k-v pairs are actually stored in the HashMap
     private float loadFactor;//determin when to rehash;
 
-    public HashMap(){
+    public LeetcodeHashMap(){
         this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
     }
 
-    public HashMap(int cap, float loadFactor) {
+    public LeetcodeHashMap(int cap, float loadFactor) {
         if (cap <= 0) {
             throw new IllegalArgumentException("cap cannot be <= 0");
         }
